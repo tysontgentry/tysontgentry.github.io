@@ -1,0 +1,26 @@
+.section-title {
+  margin-bottom: 2rem;
+  max-width: 40rem;
+}
+
+.section-title__eyebrow {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.section-title__heading {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.5rem, 2vw + 1rem, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.section-title__desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}

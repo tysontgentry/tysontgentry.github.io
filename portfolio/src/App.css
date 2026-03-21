@@ -1,0 +1,57 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-glow--1 {
+  width: min(70vw, 520px);
+  height: min(70vw, 520px);
+  top: -15%;
+  right: -10%;
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.bg-glow--2 {
+  width: min(60vw, 400px);
+  height: min(60vw, 400px);
+  bottom: 10%;
+  left: -15%;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+}
+
+.section {
+  margin-bottom: clamp(3rem, 8vw, 5rem);
+}
+
+.section--contact {
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,24 @@
+.experience__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.experience__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.experience__meta {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+}
+
+.experience__body {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
