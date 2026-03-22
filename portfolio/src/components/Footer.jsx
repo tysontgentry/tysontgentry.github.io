@@ -7,7 +7,7 @@ function formatUtcTime() {
     hour: 'numeric',
     minute: '2-digit',
     hour12: true,
-    timeZone: 'UTC',
+    timeZone: profile.timezone,
     timeZoneName: 'short',
   }).format(new Date())
 }
@@ -26,7 +26,7 @@ export default function Footer() {
         <p className="site-footer__meta">
           <span>Version: {new Date().getFullYear()} · Edition</span>
           <span className="site-footer__dot" aria-hidden />
-          <span>Local time (UTC): {time}</span>
+          <span>{profile.location} · {profile.timezoneLabel}: {time}</span>
         </p>
         <p className="site-footer__socials">
           Socials:{' '}

@@ -13,6 +13,8 @@ export const profile = {
   email: 'tysontgtg@gmail.com',
   phone: '(972) 765-3813',
   location: 'Dallas, TX',
+  timezone: 'America/Chicago',
+  timezoneLabel: 'Central Time',
   school: 'University of Houston',
   schoolLine: 'University of Houston',
   degree: 'B.S. Computer Science',
@@ -25,6 +27,12 @@ export const profile = {
   github: '',
   resumePath: '/resume.pdf',
 }
+
+export const heroStats = [
+  { label: 'Graduation', value: 'Dec 2027' },
+  { label: 'Internship target', value: 'Summer 2026' },
+  { label: 'Primary focus', value: 'Algorithms + full-stack' },
+]
 
 export const highlights = [
   {
@@ -94,29 +102,41 @@ export const projects = [
   {
     title: 'Shortest Path Graph Solver',
     subtitle: 'C++ · Algorithms',
+    status: 'Completed',
+    year: '2025',
     description:
       'Built a high-performance graph solver in C++ using Dijkstra’s algorithm to compute shortest paths in weighted graphs. Optimized with priority queues for O(E log V) time and validated with a Linux-based testing suite.',
+    outcome: 'Designed for fast weighted-graph pathfinding with strong asymptotic performance.',
     tags: ['C++', 'Dijkstra', 'Data Structures'],
   },
   {
     title: 'Knight’s Tour Backtracking Solver',
     subtitle: 'C++ · Algorithms',
+    status: 'Completed',
+    year: '2025',
     description:
       'Implemented recursive backtracking to solve closed Knight’s Tour problems with board constraints, blocked tiles, and dynamic output for valid tours.',
+    outcome: 'Showcases recursive search, constraint handling, and algorithmic debugging.',
     tags: ['C++', 'Backtracking'],
   },
   {
     title: 'Data Pipeline Automation',
     subtitle: 'Python · Data',
+    status: 'Completed',
+    year: '2025',
     description:
       'Python preprocessing pipeline for large CSV datasets—cleaning, normalization, and NumPy validation for nulls and outliers, improving downstream analysis quality.',
+    outcome: 'Reduced repetitive prep work and improved dataset consistency before analysis.',
     tags: ['Python', 'NumPy', 'Pipelines'],
   },
   {
     title: 'Portfolio Website',
     subtitle: 'React · In progress',
+    status: 'Active build',
+    year: '2026',
     description:
       'Responsive portfolio using HTML, CSS, and React; Cursor AI for code generation, refactoring, and design iteration.',
+    outcome: 'Built to present projects, strengths, and internship readiness in one polished site.',
     tags: ['React', 'Vite', 'AI-assisted'],
     highlight: true,
   },
@@ -158,4 +178,31 @@ export const navLinks = [
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Expertise' },
   { id: 'contact', label: 'Contact' },
+]
+
+export const contactLinks = [
+  {
+    label: 'Email',
+    value: 'tysontgtg@gmail.com',
+    href: `mailto:${profile.email}`,
+    note: 'Best for internship and project outreach.',
+  },
+  {
+    label: 'Phone',
+    value: profile.phone,
+    href: `tel:${profile.phone.replace(/\D/g, '')}`,
+    note: 'Available for recruiter follow-up and quick calls.',
+  },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/tyson-gentry',
+    href: profile.linkedin,
+    note: 'Professional profile, education, and current activity.',
+  },
+  {
+    label: 'Resume',
+    value: 'Open PDF',
+    href: profile.resumePath,
+    note: 'Condensed experience, coursework, and technical skills.',
+  },
 ]

@@ -3,6 +3,19 @@
   padding-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
+.hero__layout {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .hero__layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+    gap: 3rem;
+  }
+}
+
 .hero__folio {
   margin: 0 0 1.25rem;
   font-family: var(--font-mono);
@@ -35,11 +48,18 @@
 }
 
 .hero__tag {
-  margin: 0 0 2.25rem;
+  margin: 0 0 1.15rem;
   max-width: 36rem;
   font-size: clamp(1.05rem, 1.5vw + 0.85rem, 1.2rem);
   color: var(--muted);
   line-height: 1.55;
+}
+
+.hero__summary {
+  margin: 0 0 2rem;
+  max-width: 44rem;
+  font-size: 1rem;
+  color: var(--body-subtle);
 }
 
 .hero__meta {
@@ -57,6 +77,71 @@
     padding: 1.75rem 0 0;
     border-top: 1px solid var(--line-faint);
   }
+}
+
+.hero__panel {
+  position: relative;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.46)),
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.14), transparent 42%);
+  backdrop-filter: blur(16px);
+}
+
+.hero__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), transparent 40%, rgba(167, 139, 250, 0.08));
+  pointer-events: none;
+}
+
+.hero__panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__panel-label,
+.hero__stat-label {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.hero__panel-title {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.hero__panel-copy {
+  margin: 0;
+  color: var(--body-subtle);
+  font-size: 0.94rem;
+}
+
+.hero__stats {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.35rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--line-faint);
+}
+
+.hero__stat {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.hero__stat-value {
+  font-size: 1rem;
+  color: var(--text);
 }
 
 .hero__meta-block {
