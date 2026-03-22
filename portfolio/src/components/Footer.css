@@ -1,15 +1,50 @@
 .site-footer {
   position: relative;
   z-index: 1;
-  border-top: 1px solid var(--card-border);
-  padding: 1.5rem 1.25rem 2rem;
-  margin-top: 1rem;
+  border-top: 1px solid var(--line-faint);
+  padding: 2rem clamp(1.25rem, 4vw, 2rem) 2.5rem;
+  margin-top: 0.5rem;
 }
 
 .site-footer__inner {
-  max-width: 1040px;
+  max-width: min(1400px, 100%);
   margin: 0 auto;
   text-align: center;
-  font-size: 0.8125rem;
+}
+
+.site-footer__meta {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.site-footer__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--muted);
+  opacity: 0.45;
+}
+
+.site-footer__socials {
+  margin: 0 0 1rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.site-footer__socials a {
+  color: var(--accent);
+}
+
+.site-footer__copy {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  opacity: 0.9;
 }

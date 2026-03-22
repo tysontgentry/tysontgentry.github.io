@@ -1,26 +1,23 @@
-import { skillGroups, skillsBlurb } from '../data/content'
+import { expertiseGroups, expertiseIntro } from '../data/content'
 import SectionTitle from './SectionTitle'
+import SkillBar from './SkillBar'
 import './Skills.css'
 
 export default function Skills() {
   return (
-    <div className="skills">
-      <div className="skills__intro">
-        <SectionTitle
-          eyebrow="Toolkit"
-          title="Skills"
-          description={skillsBlurb}
-        />
-      </div>
-      <div className="skills__grid">
-        {skillGroups.map((g) => (
-          <div key={g.title} className="skills__card card">
-            <h3 className="skills__card-title">{g.title}</h3>
-            <ul className="skills__list">
-              {g.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+    <div className="expertise">
+      <SectionTitle
+        eyebrow="Stack"
+        title="Expertise"
+        description={expertiseIntro}
+      />
+      <div className="expertise__grid">
+        {expertiseGroups.map((group) => (
+          <div key={group.title} className="expertise__column">
+            <h3 className="expertise__group-title">{group.title}</h3>
+            {group.items.map((row) => (
+              <SkillBar key={row.name} name={row.name} pct={row.pct} />
+            ))}
           </div>
         ))}
       </div>

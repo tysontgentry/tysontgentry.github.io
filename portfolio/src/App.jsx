@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import IntroSection from './components/IntroSection'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
@@ -30,8 +31,29 @@ export default function App() {
         <Hero />
 
         <motion.section
-          id="projects"
           className="section"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          variants={sectionReveal}
+        >
+          <IntroSection />
+        </motion.section>
+
+        <motion.section
+          id="experience"
+          className="section"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          variants={sectionReveal}
+        >
+          <Experience />
+        </motion.section>
+
+        <motion.section
+          id="projects"
+          className="section section--projects"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
@@ -49,17 +71,6 @@ export default function App() {
           variants={sectionReveal}
         >
           <Skills />
-        </motion.section>
-
-        <motion.section
-          id="experience"
-          className="section"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-          variants={sectionReveal}
-        >
-          <Experience />
         </motion.section>
 
         <motion.section

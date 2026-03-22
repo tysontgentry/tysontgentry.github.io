@@ -22,8 +22,8 @@ export default function Projects() {
     <div className="projects">
       <SectionTitle
         eyebrow="Work"
-        title="Selected projects"
-        description="A mix of algorithms, systems-style work, data tooling, and frontend — aligned with my CS coursework and interests."
+        title="Projects"
+        description="Selected work focused on algorithms, data pipelines, and product-style delivery—coursework and personal builds."
       />
       <motion.div
         className="projects__grid"
@@ -33,7 +33,7 @@ export default function Projects() {
         viewport={{ once: true, margin: '-60px' }}
       >
         {projects.map((p) => (
-          <motion.div key={p.title} variants={cardVariant}>
+          <motion.div key={p.title} className="projects__item" variants={cardVariant}>
             <ProjectCard project={p} />
           </motion.div>
         ))}

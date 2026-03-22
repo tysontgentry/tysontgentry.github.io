@@ -1,24 +1,122 @@
-.experience__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
+.experience__orgs {
+  margin-bottom: 2.25rem;
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: var(--body-subtle);
 }
 
-.experience__title {
-  margin: 0 0 0.35rem;
-  font-size: 1.05rem;
+.experience__org-pill {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  font-size: inherit;
+  color: var(--body-subtle);
+}
+
+.experience__org-pill:not(:last-child)::after {
+  content: ' · ';
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.experience__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  margin-bottom: 2.75rem;
+}
+
+.experience__job {
+  padding: 0 0 0 1.15rem;
+  border: none;
+  border-radius: 0;
+  background: none;
+  border-left: 2px solid var(--accent);
+  transition: opacity 0.2s ease;
+}
+
+.experience__job--secondary {
+  border-left-color: var(--accent-2);
+  opacity: 0.92;
+}
+
+.experience__job:hover {
+  opacity: 1;
+}
+
+.experience__job-head {
+  margin-bottom: 0.85rem;
+}
+
+.experience__role {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
-.experience__meta {
-  margin: 0 0 0.75rem;
-  font-size: 0.78rem;
-  font-family: var(--font-mono);
+.experience__company {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
-.experience__body {
+.experience__dates {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.experience__desc {
   margin: 0;
   font-size: 0.95rem;
-  color: #cbd5e1;
+  color: var(--body-subtle);
+  line-height: 1.65;
+}
+
+.experience__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line-faint);
+}
+
+@media (min-width: 640px) {
+  .experience__stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+.experience__stat {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  background: none;
+}
+
+.experience__stat-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+}
+
+.experience__stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
 }

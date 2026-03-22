@@ -1,17 +1,21 @@
 :root {
-  --bg-deep: #020617;
+  --bg-deep: #0a0f1a;
   --bg-mid: #0f172a;
-  --card: #0c1222;
-  --card-border: rgba(148, 163, 184, 0.22);
+  --surface: transparent;
+  --line: rgba(148, 163, 184, 0.14);
+  --line-faint: rgba(148, 163, 184, 0.08);
   --accent: #38bdf8;
-  --accent-dim: rgba(56, 189, 248, 0.15);
-  --text: #e5e7eb;
+  --accent-2: #a78bfa;
+  --accent-bright: #7dd3fc;
+  --accent-dim: rgba(56, 189, 248, 0.14);
+  --text: #f1f5f9;
   --muted: #94a3b8;
+  --body-subtle: #cbd5e1;
   --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Syne', var(--font-sans);
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
   --radius: 1rem;
   --radius-sm: 0.5rem;
-  --shadow: 0 24px 80px rgba(2, 6, 23, 0.65);
 }
 
 *,
@@ -30,6 +34,8 @@ body {
   font-family: var(--font-sans);
   font-optical-sizing: auto;
   background: var(--bg-deep);
+  background-image: radial-gradient(ellipse 120% 80% at 50% -30%, rgba(56, 189, 248, 0.08), transparent 50%),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(167, 139, 250, 0.06), transparent 45%);
   color: var(--text);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -46,10 +52,17 @@ a {
 }
 
 a:hover {
-  color: #7dd3fc;
+  color: var(--accent-bright);
 }
 
 ::selection {
   background: var(--accent-dim);
   color: var(--text);
+}
+
+/* Legacy helper — no box; sections use spacing + borders on parents */
+.card {
+  border: none;
+  border-radius: 0;
+  background: transparent;
 }
