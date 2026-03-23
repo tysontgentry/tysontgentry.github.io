@@ -110,14 +110,15 @@ export const projects = [
     tags: ['C++', 'Dijkstra', 'Data Structures'],
   },
   {
-    title: 'Knight’s Tour Backtracking Solver',
-    subtitle: 'C++ · Algorithms',
-    status: 'Completed',
-    year: '2025',
+    title: 'Postal Service Database Project',
+    subtitle: 'MySQL · Node.js',
+    status: 'In progress',
+    year: '2026',
     description:
-      'Implemented recursive backtracking to solve closed Knight’s Tour problems with board constraints, blocked tiles, and dynamic output for valid tours.',
-    outcome: 'Showcases recursive search, constraint handling, and algorithmic debugging.',
-    tags: ['C++', 'Backtracking'],
+      'Collaborating on the design and development of a MySQL relational database for a postal service, including schema design, table creation, and structured data management.',
+    outcome:
+      'Building a Node.js backend server to connect to the database, execute SQL queries, and support data access, retrieval, and update operations.',
+    tags: ['MySQL', 'Node.js', 'Databases'],
   },
   {
     title: 'Data Pipeline Automation',
