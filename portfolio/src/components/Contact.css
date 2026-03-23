@@ -1,22 +1,31 @@
 .contact-cta {
-  text-align: center;
   padding: 2.5rem 0 1rem;
-  border: none;
-  border-radius: 0;
-  background: none;
+  text-align: left;
+}
+
+.contact-cta__heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.contact-cta__eyebrow,
+.contact-cta__card-label {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .contact-cta__mark {
-  width: auto;
-  height: auto;
-  margin: 0 auto 1rem;
-  display: block;
-  border-radius: 0;
+  flex-shrink: 0;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(2.5rem, 5vw + 1rem, 3.25rem);
+  font-size: clamp(2.4rem, 5vw + 1rem, 3.1rem);
   letter-spacing: -0.06em;
-  border: none;
   color: transparent;
   background: linear-gradient(135deg, #38bdf8, #a78bfa);
   -webkit-background-clip: text;
@@ -25,7 +34,7 @@
 }
 
 .contact-cta__title {
-  margin: 0 0 1rem;
+  margin: 0.2rem 0 0;
   font-family: var(--font-display);
   font-size: clamp(1.65rem, 3vw + 1rem, 2.15rem);
   font-weight: 700;
@@ -33,17 +42,52 @@
   color: var(--text);
 }
 
-.contact-cta__line {
-  margin: 0 0 1.5rem;
+.contact-cta__summary {
+  margin: 0 0 1.8rem;
+  max-width: 48rem;
+  color: var(--body-subtle);
   font-size: 1rem;
 }
 
-.contact-cta__line a {
-  color: var(--accent);
+.contact-cta__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.contact-cta__sep {
+.contact-cta__card {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.1rem 1rem;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.48));
+  color: var(--text);
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.contact-cta__card:hover {
+  color: var(--text);
+  border-color: rgba(56, 189, 248, 0.42);
+  transform: translateY(-2px);
+}
+
+.contact-cta__card-value {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.contact-cta__card-note {
   color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.contact-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
 }
 
 .contact-cta__btn {
@@ -69,4 +113,33 @@
 
 .contact-cta__btn:active {
   transform: scale(0.98);
+}
+
+.contact-cta__btn--secondary {
+  background: transparent;
+  border: 1px solid var(--line);
+  box-shadow: none;
+  color: var(--text);
+}
+
+.contact-cta__btn--secondary:hover {
+  color: var(--text);
+  border-color: rgba(167, 139, 250, 0.45);
+  box-shadow: none;
+}
+
+@media (max-width: 640px) {
+  .contact-cta {
+    text-align: center;
+  }
+
+  .contact-cta__heading {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-cta__actions {
+    justify-content: center;
+  }
 }
